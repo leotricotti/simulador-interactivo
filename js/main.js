@@ -46,7 +46,7 @@ while (seleccion != "4") {
       break;
 
     default:
-      alert("Opcion invalida. Vuelva a intentarlo.");
+      alert("Opcion inválida. Vuelva a intentarlo.");
       break;
   }
   seleccion = prompt(
