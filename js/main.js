@@ -1,9 +1,16 @@
 //Saldo inicial
 let saldo = 100000;
 
+operar();
+
 //Función menu inicio  
 function operar(){
-    let seleccion = prompt("Seleccione la operación deseada: \n1) Depositos \n2) Extracciones \n3) Consulta de saldo \n4) Salir");
+    let seleccion = prompt("Seleccione la operación deseada: \n1)Consulta de saldo   \n2) Depositos \n3) Extracciones \n4) Salir");
+}
+
+//Funcion para consultar el saldo
+function consultar(){
+    return alert("Su saldo es: $ " + saldo);
 }
 
 //Funcion para realizar depositos
@@ -20,9 +27,28 @@ function extraer(){
     return alert("Operación realizada con exito. \nSu saldo es: $ " + saldo);
 }
 
-//Funcion para consultar el saldo
-function consultar(){
-    return alert("Su saldo es: $ " + saldo);
+//Funcion para salir del sistema
+function salir(){
+    return alert("Gracias por utilizar nuestros servicios.")
 }
 
+//Programa principal
+while(seleccion != "4"){
+    switch(seleccion){
+        case "1":
+            consultar();
+        
+        case "2":
+            depositar();
+        
+        case "3":
+            extraer();
+        
+        default:
+            alert("Opcion invalida. Vuelva a intentarlo.");
+            operar();
+        }
+    operar();
+}
 
+salir();
