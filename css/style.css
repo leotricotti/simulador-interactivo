@@ -395,7 +395,7 @@ body {
 
 .grid-container {
     display: grid; 
-    grid-template: "header" 50px  "heading" "main" "footer" / 1fr;
+    grid-template: "header" 4vh "heading" "main" "footer" / 1fr;
 }
 
 /* Header */
