@@ -385,7 +385,7 @@ body {
 
 .grid-container {
     display: grid; 
-    grid-template: "header" 50px  "heading" "main" "footer" 30px / 1fr;
+    grid-template: "header" 50px  "heading" "main" "footer" 80px / 1fr;
 }
 
 /* Header */
@@ -400,6 +400,7 @@ body {
     justify-content: left;
     align-items: center;
     padding: 0 1rem;
+    z-index: 1;
 }
 
 .bank-logo {
@@ -421,13 +422,135 @@ body {
     font-size: 2rem;
     padding: 1rem 0;
     text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.5;
 }
 
-
+/* Main */
 
 .cajero-container {
     grid-area: main;
-    height: 100vh;
-    margin: 0 1rem 2rem 1rem;
+    color: #fff;
     background-color: #304d75;
+    padding-bottom: 2rem;
+    margin: 0 1rem 2rem 1rem;
+}
+
+.heading-text {
+    font-family: heading;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.5;
+}
+
+.btn, .btn-izquierda{
+    background-color: #e6e6e6;
+    height: 50px;
+    width: 44px;
+    position: relative;
+    z-index: 0;
+    margin: 1.25rem 2rem 1.25rem 2rem;
+    transition: all .5 ease-in;
+}
+
+div.btn-izquierda::before {
+    right: -25px;
+    border-width: 25px 25px 25px 0;
+    transform: rotateY(180deg)
+}
+
+div.btn::before {
+    left: -25px;
+    border-width: 25px 25px 25px 0;
+}
+
+div.btn::after, div.btn::before, div.btn-izquierda::after,
+div.btn-izquierda::before {
+    border-color: transparent #e6e6e6;
+}
+
+div::before, div::after {
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-style: solid;
+    border-width: 0;
+}
+
+.teclado-izquierda, .teclado-derecha {
+    font-family:  heading;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.teclas-izquierda {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.teclas-derecha {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.teclado-izquierda p {
+    margin-left: 1rem;
+    letter-spacing: 2px;
+}
+
+.teclado-derecha p {
+    margin: 0 1rem;
+    letter-spacing: 2px;
+}
+
+.btn:hover, .btn-izquierda:hover {
+    transform: translateY(-5px);
+}
+
+/* Footer */
+
+.footer {
+    grid-area: footer;
+    width: 100%;
+    height: 80px;
+    color: #fff;
+    font-family: heading;
+    letter-spacing: 2px;
+    background-color: #191919;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+@media (min-width: 62rem){
+    .header-container {
+        height: 62.25px;
+        padding: 0 5rem;
+    }
+
+    .heading-container  {
+        margin: 3rem 5rem 0 5rem;
+    }
+
+    .cajero-container {
+        margin: 0 5rem 3rem 5rem;
+    }
+
+    .teclado-container {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 5rem;
+    }
 }
