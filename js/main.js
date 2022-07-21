@@ -2,28 +2,28 @@
 let saldo = 100000;
 
 //Menu inicio
-let seleccion = prompt("Seleccione la operación deseada: \n1) Consulta de saldo  \n2) Depositos \n3) Extracciones \n4) Salir");
+let seleccion = prompt("Seleccione la operación deseada: \n1) Consulta de saldo  \n2) Depósitos \n3) Extracciones \n4) Salir");
 
-//Funcion para consultar el saldo
+//Función para consultar el saldo
 function consultar(){
     return alert("Su saldo es: $ " + saldo);
 }
 
-//Funcion para realizar depositos
+//Función para realizar depositos
 function depositar(){
-    let deposito = parseInt(prompt("Ingrese el monto que desea depositar: "));
+    let deposito = parseInt(prompt("Ingrese el monto que desea depósitar: "));
     saldo = saldo + deposito;
-    return alert("Operación realizada con exito. \nSu saldo es: $ " + saldo);
+    return alert("Operación realizada con exíto. \nSu saldo es: $ " + saldo);
 }
 
-//Funcion para realizar extracciones
+//Función para realizar extracciones
 function extraer(){
     let extraccion = parseInt(prompt("Ingrese el monto que desea extraer: "));
     saldo = saldo - extraccion;
-    return alert("Operación realizada con exito. \nSu saldo es: $ " + saldo);
+    return alert("Operación realizada con exíto. \nSu saldo es: $ " + saldo);
 }
 
-//Funcion para salir del sistema
+//Función para salir del sistema
 function salir(){
     return alert("Gracias por utilizar nuestros servicios.")
 }
