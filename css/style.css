@@ -395,7 +395,7 @@ body {
 
 .grid-container {
     display: grid; 
-    grid-template: "header" 4vh "heading" "main" "footer" / 1fr;
+    grid-template: "header" 6rem "heading" "main" "footer" / 1fr;
 }
 
 /* Header */
@@ -404,7 +404,7 @@ body {
     grid-area: header;
     position: fixed;
     width: 100%;
-    height: 50px;
+    height: 6rem;
     background-color: #004987;
     display: flex;
     justify-content: left;
@@ -530,7 +530,7 @@ div::before, div::after {
 .footer {
     grid-area: footer;
     width: 100%;
-	height: 5rem;
+	  height: 6rem;
     color: #fff;
     font-family: heading;
     letter-spacing: 2px;
