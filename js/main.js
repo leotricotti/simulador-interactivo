@@ -2,7 +2,7 @@
 let saldo = 100000;
 
 //Menu inicio
-let seleccion = prompt("Seleccione la operación deseada: \n1)Consulta de saldo  \n2) Depositos \n3) Extracciones \n4) Salir");
+let seleccion = prompt("Seleccione la operación deseada: \n1) Consulta de saldo  \n2) Depositos \n3) Extracciones \n4) Salir");
 
 //Funcion para consultar el saldo
 function consultar(){
