@@ -370,11 +370,64 @@ a {
 
 /* Font */
 
+@font-face {
+    font-family: heading;
+    src: url(../font/WEHM.TTF);
+}
+
+/* Body */
+
 body {
-    font-family: 'Courier Prime', monospace;
+    background-color: #fff;
 }
 
 /* Grid */
 
+.grid-container {
+    display: grid; 
+    grid-template: "header" 50px  "heading" "main" "footer" 30px / 1fr;
+}
+
+/* Header */
+
+.header-container {
+    grid-area: header;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    background-color: #004987;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.bank-logo {
+    width: 200px;
+}
+
+/* Heading */
+
+.heading-container {
+    grid-area: heading;
+    color: #fff;
+    background-color: #002856;
+    margin: 2rem 1rem 0 1rem;
+    text-align: center;
+}
+
+.main-heading {
+    font-family: heading;
+    font-size: 2rem;
+    padding: 1rem 0;
+    text-transform: uppercase;
+}
 
 
+
+.cajero-container {
+    grid-area: main;
+    height: 100vh;
+    margin: 0 1rem 2rem 1rem;
+    background-color: #304d75;
+}
