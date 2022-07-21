@@ -50,7 +50,7 @@ while (seleccion != "4") {
       break;
   }
   seleccion = prompt(
-    "Seleccione la operación deseada: \n1)Consulta de saldo  \n2) Depositos \n3) Extracciones \n4) Salir"
+    "Seleccione la operación deseada: \n1)Consulta de saldo  \n2) Depósitos \n3) Extracciones \n4) Salir"
   );
 }
 
