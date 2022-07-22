@@ -6,6 +6,23 @@ let seleccion = prompt(
   "Seleccione la operación deseada: \n1) Consulta de saldo  \n2) Depósitos \n3) Extracciones \n4) Salir"
 );
 
+//Funcion nueva operacion
+function continuar(){
+  let continuo = prompt("Desea resalizar otra operacion? S/N");
+  if((continuo == "S") || (continuo == "s")){
+    seleccion = prompt(
+      "Seleccione la operación deseada: \n1) Consulta de saldo  \n2) Depósitos \n3) Extracciones \n4) Salir"
+    );
+  }else if((continuo == "n") || (continuo == "N")){
+    seleccion = "4";
+  }else{
+    alert("Elija una opción valida");
+    seleccion = prompt(
+      "Seleccione la operación deseada: \n1) Consulta de saldo  \n2) Depósitos \n3) Extracciones \n4) Salir"
+    );
+  }
+}
+
 //Función para consultar el saldo
 const consultar = () => { return alert("Su saldo es: $ " + saldo) }
 
@@ -43,13 +60,15 @@ while (seleccion != "4") {
       extraer();
       break;
 
+    case "continuo":
+      continuar();
+      break
+
     default:
       alert("Opcion inválida. Vuelva a intentarlo.");
       break;
   }
-  seleccion = prompt(
-    "Seleccione la operación deseada: \n1) Consulta de saldo  \n2) Depósitos \n3) Extracciones \n4) Salir"
-  );
+  continuar();
 }
 
 salir();
