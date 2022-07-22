@@ -1,5 +1,6 @@
 //Saldo inicial
 let saldo = 100000;
+const dinero = new Intl.NumberFormat( "es-AR", {style: 'currency', currency: "ARS"}).format(saldo);
 
 //Menu inicio
 let seleccion = prompt(
@@ -24,20 +25,22 @@ function continuar(){
 }
 
 //Función para consultar el saldo
-const consultar = () => { return alert("Su saldo es: $ " + saldo) }
+const consultar = () => { return alert("Su saldo es: " + dinero) }
 
 //Función para realizar depositos
 function depositar() {
-  let deposito = parseInt(prompt("Ingrese el monto que desea depósitar: "));
+  let deposito = parseFloat(prompt("Ingrese el monto que desea depósitar: "));
   saldo = saldo + deposito;
-  return alert("Operación realizada con exíto. \nSu saldo es: $ " + saldo);
+  const dinero = new Intl.NumberFormat( "es-AR", {style: 'currency', currency: "ARS"}).format(saldo);
+  return alert("Operación realizada con exíto. \nSu saldo es: " + dinero);
 }
 
 //Función para realizar extracciones
 function extraer() {
   let extraccion = parseInt(prompt("Ingrese el monto que desea extraer: "));
   saldo = saldo - extraccion;
-  return alert("Operación realizada con exíto. \nSu saldo es: $ " + saldo);
+  const dinero = new Intl.NumberFormat( "es-AR", {style: 'currency', currency: "ARS"}).format(saldo);
+  return alert("Operación realizada con exíto. \nSu saldo es: " + dinero);
 }
 
 //Función para salir del sistema
@@ -72,3 +75,4 @@ while (seleccion != "4") {
 }
 
 salir();
+
