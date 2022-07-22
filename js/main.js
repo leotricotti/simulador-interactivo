@@ -7,9 +7,7 @@ let seleccion = prompt(
 );
 
 //Función para consultar el saldo
-function consultar() {
-  return alert("Su saldo es: $ " + saldo);
-}
+const consultar = () => { return alert("Su saldo es: $ " + saldo) }
 
 //Función para realizar depositos
 function depositar() {
