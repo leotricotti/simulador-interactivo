@@ -415,7 +415,6 @@ a {
   src: url(../font/WEHM.TTF);
 }
 
-
 /* Body */
 
 body {
@@ -531,6 +530,7 @@ div::after {
 .teclado-izquierda,
 .teclado-derecha {
   font-family: heading;
+  font-size: 1.1rem;
   font-weight: bold;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -611,11 +611,11 @@ div::after {
   }
 
   .heading-container {
-    margin: 3rem 3rem 0 3rem;
+    margin: 1.5rem 3rem 0 3rem;
   }
 
   .cajero-container {
-    margin: 0 3rem 3rem 3rem;
+    margin: 0 3rem 2rem 3rem;
   }
 
 }
@@ -632,11 +632,11 @@ div::after {
   }
 
   .heading-container {
-    margin: 5rem 5rem 0 5rem;
+    margin: 2.5rem 5rem 0 5rem;
   }
 
   .cajero-container {
-    margin: 0 5rem 5rem 5rem;
+    margin: 0 5rem 3.5rem 5rem;
   }
 }
 
