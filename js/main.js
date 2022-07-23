@@ -1,6 +1,6 @@
 //Saldo inicial
 let saldo = 100000;
-const dinero = new Intl.NumberFormat("es-AR", {
+let dinero = new Intl.NumberFormat("es-AR", {
   style: "currency",
   currency: "ARS",
 }).format(saldo);
@@ -12,7 +12,7 @@ let seleccion = prompt(
 
 //Funcion nueva operacion
 function continuar() {
-  let continuo = prompt("Desea resalizar otra operacion? S/N");
+  let continuo = prompt("Desea resalizar otra operacion? S/N: ");
   if (continuo == "S" || continuo == "s") {
     seleccion = prompt(
       "Seleccione la operación deseada: \n1) Consulta de saldo  \n2) Depósitos \n3) Extracciones \n4) Salir"
@@ -36,7 +36,7 @@ const consultar = () => {
 function depositar() {
   let deposito = parseFloat(prompt("Ingrese el monto que desea depósitar: "));
   saldo = saldo + deposito;
-  const dinero = new Intl.NumberFormat("es-AR", {
+  dinero = new Intl.NumberFormat("es-AR", {
     style: "currency",
     currency: "ARS",
   }).format(saldo);
@@ -47,7 +47,7 @@ function depositar() {
 function extraer() {
   let extraccion = parseInt(prompt("Ingrese el monto que desea extraer: "));
   saldo = saldo - extraccion;
-  const dinero = new Intl.NumberFormat("es-AR", {
+  dinero = new Intl.NumberFormat("es-AR", {
     style: "currency",
     currency: "ARS",
   }).format(saldo);
